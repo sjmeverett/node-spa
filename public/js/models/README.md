@@ -1,1 +1,1 @@
-This space intentionally left (nearly) black.
+This space intentionally left (nearly) blank.
