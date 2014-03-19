@@ -1,18 +1,20 @@
+require.config({
+  baseUrl: '/js'
+});
 
-
-require(['require', 'jquery', 'page', 'controllers/index'], function (require, $, page) {
+require(['require', 'jquery', 'page', 'presenters/index'], function (require, $, page) {
   page.base('/app');
 
   //make the navbar links look right
   page('*', fixNavActive);
 
   //define the routes
-  var index = require('controllers/index');
+  var index = require('presenters/index');
   page('/', index);
   page('/hello/:name', index);
 
   //handle 404s
-  page('*', function(ctx) { 
+  page('*', function(ctx) {
     $('#content').html('<h1 class="container">404 - Page not found.</h1>');
   });
 
